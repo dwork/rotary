@@ -121,6 +121,11 @@ function rotary_profile_setup() {
     rotary_create_taxonomy_term_custom('Makeup', 'attendance', 'Makeup');
     rotary_create_taxonomy_term_custom('Regular Meeting', 'attendance', 'Present');
 
+    // event type
+    rotary_create_taxonomy_term('Meeting', 'event_type');
+    rotary_create_taxonomy_term('Board Meeting', 'event_type');
+    rotary_create_taxonomy_term('Committee Meeting', 'event_type');
+    rotary_create_taxonomy_term('Social', 'event_type');
 
 }
 /*

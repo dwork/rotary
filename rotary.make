@@ -11,6 +11,8 @@ includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/heads/7.
 projects[tao][subdir] = contrib
 projects[rubik][subdir] = contrib
 projects[mayo][subdir] = contrib
+projects[professional_theme][subdir] = contrib
+projects[professional_theme][type] = theme
 
 # Override
 projects[features][subdir] = contrib
@@ -21,19 +23,30 @@ projects[ctools][version] = "1.2"
 projects[omega][subdir] = contrib
 projects[omega][version] = "3.1"
 
-i--------------------
+projects[redirect][subdir] = contrib
+projects[redirect][version] = "1.0-rc1"
+
+
+projects[metatag][subdir] = contrib
+projects[metatag][version] = "1.0-beta4"
+
+;--------------------
 ; Additional Contrib
 ;--------------------
 
 ;  Allow site to email 
 projects[smtp][subdir] = contrib
-projects[smtp][version] = 1.0-beta2
+projects[smtp][version] = 1.0
 
 projects[mimemail][subdir] = contrib
 projects[mimemail][version] = 1.0-alpha2
 
 projects[mailsystem][subdir] = contrib
 projects[mailsystem][version] = 2.34
+
+;  Special Menu Items
+projects[special_menu_items][subdir] = contrib
+projects[special_menu_items][version] =  "2.0"
 
 ;  Simplenews newsletter
 projects[simplenews][subdir] = contrib
@@ -48,10 +61,10 @@ projects[calendar][subdir] = contrib
 projects[calendar][version] = 3.4
 
 projects[link][subdir] = contrib
-projects[link][version] = 1.0
+projects[link][version] = 1.1
 
 projects[admin_menu][subdir] = contrib
-projects[admin_menu][version] = 3.0-rc3
+projects[admin_menu][version] = 3.0-rc4
 
 projects[boxes][subdir] = contrib
 projects[boxes][version] = 1.0
@@ -70,22 +83,22 @@ projects[addressfield][subdir] = "contrib"
 projects[auto_nodetitle][version] = "1.0"
 projects[auto_nodetitle][subdir] = "contrib"
 
-projects[ckeditor][version] = "1.9"
+projects[ckeditor][version] = "1.12"
 projects[ckeditor][subdir] = "contrib"
 
 projects[cck_phone][version] = "1.x-dev"
 projects[cck_phone][subdir] = "contrib"
 
-projects[context][version] = "3.0-beta4"
+projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
-projects[css_injector][version] = "1.7"
+projects[css_injector][version] = "1.8"
 projects[css_injector][subdir] = "contrib"
 
 projects[date][version] = "2.6"
 projects[date][subdir] = "contrib"
 
-projects[defaultcontent][version] = "1.0-alpha6"
+projects[defaultcontent][version] = "1.0-alpha9"
 projects[defaultcontent][subdir] = "contrib"
 
 projects[editablefields][version] = "1.0-alpha2"
@@ -97,17 +110,20 @@ projects[email][subdir] = "contrib"
 projects[entity][version] = "1.x-dev"
 projects[entity][subdir] = "contrib"
 
-projects[entityreference][version] = "1.0-rc5"
+projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
 projects[entityconnect][version] = "1.0-beta2"
 projects[entityconnect][subdir] = "contrib"
 
-projects[eva][version] = "1.2"
-projects[eva][subdir] = "contrib"
+; projects[eva][version] = "1.2"
+; projects[eva][subdir] = "contrib"
 
 projects[fancy_login][version] = "1.0-beta2"
 projects[fancy_login][subdir] = "contrib"
+
+; projects[features_extra][version] = "1.0-alpha2"
+; projects[features_extra][subdir] = "contrib"
 
 projects[field_permissions][version] = "1.0-beta2"
 projects[field_permissions][subdir] = "contrib"
@@ -133,7 +149,7 @@ projects[geophp][subdir] = "contrib"
 ; projects[hierarchical_select][version] = "3.0-alpha5"
 ; projects[hierarchical_select][subdir] = "contrib"
 
-projects[imce][version] = "1.5"
+projects[imce][version] = "1.7"
 projects[imce][subdir] = "contrib"
 
 projects[insert_view][version] = "2.0"
@@ -148,16 +164,28 @@ projects[logintoboggan][subdir] = "contrib"
 projects[nice_menus][version] = "2.1"
 projects[nice_menus][subdir] = "contrib"
 
+; copy of "node_clone", due to naming inconsistency
+projects[clone][download][type] = "git"
+projects[clone][download][url] = "https://github.com/dwork/clone.git"
+projects[clone][subdir] = "contrib"
+projects[clone][type] = "module"
+
+projects[node_clone][version] = "7.x-1.0-rc1"
+projects[node_clone][subdir] = "contrib"
+
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
-projects[profile2][version] = "1.2"
+projects[profile2][version] = "1.3"
 projects[profile2][subdir] = "contrib"
 
 projects[quicktabs][version] = "3.4"
 projects[quicktabs][subdir] = "contrib"
 
-projects[references][version] = "2.0"
+projects[readmorecontrol][version] = "1.0"
+projects[readmorecontrol][subdir] = "contrib"
+
+projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
 
 projects[registration][version] = "1.0-beta3"
@@ -165,9 +193,6 @@ projects[registration][subdir] = "contrib"
 
 projects[registration_views][version] = "1.0"
 projects[registration_views][subdir] = "contrib"
-
-projects[node_clone][version] = "1.0-rc1"
-projects[node_clone][subdir] = "contrib"
 
 projects[nodereference_url][version] = "1.12"
 projects[nodereference_url][subdir] = "contrib"
@@ -193,6 +218,11 @@ projects[club_committee][download][type] = "git"
 projects[club_committee][download][url] = "https://github.com/dwork/club_committee.git"
 projects[club_committee][subdir] = "contrib"
 projects[club_committee][type] = "module"
+
+projects[club_dues][download][type] = "git"
+projects[club_dues][download][url] = "https://github.com/dwork/club_dues.git"
+projects[club_dues][subdir] = "contrib"
+projects[club_dues][type] = "module"
 
 projects[club_events][download][type] = "git"
 projects[club_events][download][url] = "https://github.com/dwork/club_events.git"
@@ -227,6 +257,9 @@ projects[image_gallery][version] = "1.0-beta1"
 
 projects[token][version] = "1.4"
 projects[token][subdir] = "contrib"
+
+projects[views_calc][version] = "1.0"
+projects[views_calc][subdir] = "contrib"
 
 projects[views_php][version] = "1.x-dev"
 projects[views_php][subdir] = "contrib"

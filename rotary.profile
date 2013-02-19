@@ -127,6 +127,16 @@ function rotary_profile_setup() {
     rotary_create_taxonomy_term('Committee Meeting', 'event_type');
     rotary_create_taxonomy_term('Social', 'event_type');
 
+  // Dues Application Rule
+  _create_taxonomy_term('Anniversary', 'dues_application_rule');
+  _create_taxonomy_term('Policy Date', 'dues_application_rule');
+
+  // Membership Renewal
+  _create_taxonomy_term('Automatic', 'membership_renewal','Membership is automatically renewed following payment of dues');
+  _create_taxonomy_term('Membership', 'membership_renewal','Membership at large votes on renewal before it is official');
+  _create_taxonomy_term('Officers', 'membership_renewal','Renewal requires approval by chapter/club officers or board');
+  _create_taxonomy_term('Not Renewable', 'membership_renewal','Membership is not renewable');
+
 }
 /*
  * Create taxonomy vocabulary
@@ -145,7 +155,7 @@ function rotary_create_taxonomy($name,$machine_name,$description,$help) {
 /*
  * Create taxonomy terms give machine name ($mac)
  */
-function rotary_create_taxonomy_term($name,$machine_name) {
+function _create_taxonomy_term($name,$machine_name,$description = NULL) {
   $voc = taxonomy_vocabulary_machine_name_load($machine_name);
   $term = new stdClass();
   $term->name = $name;
@@ -153,6 +163,9 @@ function rotary_create_taxonomy_term($name,$machine_name) {
   	$term->vid = $voc->vid;
   } else {
     	$term->vid = 1;
+  }
+  if (isset($description)) {
+     $term->description = $description;
   }
   taxonomy_term_save($term);
   return $term->tid;

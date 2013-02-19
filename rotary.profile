@@ -128,14 +128,14 @@ function rotary_profile_setup() {
     rotary_create_taxonomy_term('Social', 'event_type');
 
   // Dues Application Rule
-  _create_taxonomy_term('Anniversary', 'dues_application_rule');
-  _create_taxonomy_term('Policy Date', 'dues_application_rule');
+  rotary_create_taxonomy_term('Anniversary', 'dues_application_rule');
+  rotary_create_taxonomy_term('Policy Date', 'dues_application_rule');
 
   // Membership Renewal
-  _create_taxonomy_term('Automatic', 'membership_renewal','Membership is automatically renewed following payment of dues');
-  _create_taxonomy_term('Membership', 'membership_renewal','Membership at large votes on renewal before it is official');
-  _create_taxonomy_term('Officers', 'membership_renewal','Renewal requires approval by chapter/club officers or board');
-  _create_taxonomy_term('Not Renewable', 'membership_renewal','Membership is not renewable');
+  rotary_create_taxonomy_term('Automatic', 'membership_renewal','Membership is automatically renewed following payment of dues');
+  rotary_create_taxonomy_term('Membership', 'membership_renewal','Membership at large votes on renewal before it is official');
+  rotary_create_taxonomy_term('Officers', 'membership_renewal','Renewal requires approval by chapter/club officers or board');
+  rotary_create_taxonomy_term('Not Renewable', 'membership_renewal','Membership is not renewable');
 
 }
 /*

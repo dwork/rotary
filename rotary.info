@@ -60,7 +60,6 @@ dependencies[] = mailsystem
 dependencies[] = markdown
 dependencies[] = mimemail
 dependencies[] = nice_menus
-dependencies[] = node_clone
 dependencies[] = node_reference
 dependencies[] = nodereference_url
 dependencies[] = openid

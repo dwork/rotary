@@ -170,9 +170,6 @@ projects[clone][download][url] = "https://github.com/dwork/clone.git"
 projects[clone][subdir] = "contrib"
 projects[clone][type] = "module"
 
-projects[node_clone][version] = "7.x-1.0-rc1"
-projects[node_clone][subdir] = "contrib"
-
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 

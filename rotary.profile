@@ -155,7 +155,7 @@ function rotary_create_taxonomy($name,$machine_name,$description,$help) {
 /*
  * Create taxonomy terms give machine name ($mac)
  */
-function _create_taxonomy_term($name,$machine_name,$description = NULL) {
+function rotary_create_taxonomy_term($name,$machine_name,$description = NULL) {
   $voc = taxonomy_vocabulary_machine_name_load($machine_name);
   $term = new stdClass();
   $term->name = $name;
@@ -174,7 +174,7 @@ function _create_taxonomy_term($name,$machine_name,$description = NULL) {
 /*
  * Create taxonomy terms give machine name ($mac)
  */
-function _create_taxonomy_term_custom($name,$machine_name,$statistic) {
+function rotary_create_taxonomy_term_custom($name,$machine_name,$statistic) {
   $voc = taxonomy_vocabulary_machine_name_load($machine_name);
   $term = new stdClass();
   $term->name = $name;
